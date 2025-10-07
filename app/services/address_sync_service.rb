@@ -18,7 +18,7 @@ class AddressSyncService
   
   def save_transactions(data)
     count = 0
-    transactions = data['transactions'] || []
+    transactions = data['txs'] || []
     
     transactions.each do |tx_data|
       save_transaction(tx_data)
@@ -53,16 +53,16 @@ class AddressSyncService
   end
   
   def find_amount_in_outputs(tx_data)
-    outputs = tx_data['outputs'] || []
+    outputs = tx_data['out'] || []
     outputs
-      .select { |output| output['recipient'] == @address.address }
+      .select { |output| output['addr'] == @address.address }
       .sum { |output| output['value'] || 0 }
   end
   
   def find_amount_in_inputs(tx_data)
     inputs = tx_data['inputs'] || []
     inputs
-      .select { |input| input['recipient'] == @address.address }
+      .select { |input| input.dig('prev_out', 'addr') == @address.address }  # Changed
       .sum { |input| input['value'] || 0 }
   end
 end

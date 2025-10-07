@@ -55,5 +55,5 @@ API will be available at http://localhost:3000
 
 rspec 
 
-
+Ran into rate limit issues with blockchair so had to switch to blockchain.com. 
 

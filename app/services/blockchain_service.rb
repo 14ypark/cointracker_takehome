@@ -1,18 +1,16 @@
 class BlockchainService
   include HTTParty
-  base_uri 'https://api.blockchair.com'
+  base_uri 'https://blockchain.info'
+
   
   def self.fetch_address_data(btc_address)
-    response = get("/bitcoin/dashboards/address/#{btc_address}")
+    response = get("/rawaddr/#{btc_address}?limit=50")
     
     unless response.success?
-      raise StandardError, "Blockchair API Error: #{response.code} - #{response.message}"
+      raise StandardError, "Blockchain API Error: #{response.code}"
     end
     
-    data = response.parsed_response['data'][btc_address]
-    raise StandardError, "Address not found" unless data
-    
-    data
+    response.parsed_response
   rescue HTTParty::Error, SocketError, Timeout::Error => e
     Rails.logger.error("BlockchainService Error: #{e.message}")
     raise StandardError, "Failed to fetch blockchain data: #{e.message}"
