@@ -29,6 +29,18 @@ ruby 3.2.2<br>
 PostgreSQL 14<br>
 Bundler<br>
 
+# Assumptions
+1. Multi user is not supported
+2. Bitcoin only
+3. Reliant on Blockchain.com
+4. For v0.1, sync is triggered by the user
+
+# Design decisions
+1. Store transactions locally instead of fetching each time
+2. When address is deleted, all associated transactions will be deleted
+3. Service layer for reusability and future enhancements
+4. Many validations layers for robustness
+
 # Installation
 ```git clone git@github.com:14ypark/cointracker_takehome.git```<br>
 ```cd coin_tracker_takehome```<br>
