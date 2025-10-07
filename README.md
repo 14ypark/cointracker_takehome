@@ -20,7 +20,7 @@ Rails<br>
 PostgreSQL<br>
 RSpec<br>
 HTTParty<br>
-BlockChair API<br>
+BlockChain API<br>
 
 ## Setup instructions
 
@@ -38,6 +38,17 @@ Bundler<br>
 ```rails server```<br>
 
 API will be available at http://localhost:3000
+
+# Service objects
+
+1. BlockchainService: Handles external API communication<br>
+2. AddressSyncService: Handles balance calculation as well as syncing transactions<br>
+
+# Database Schema
+
+1. addresses: Stores Bitcoin addresses with balance tracking<br>
+2. transactions: Individual transaction records with proper indexing<br>
+
 
 ## API Endpoints
 
