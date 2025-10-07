@@ -30,23 +30,25 @@ PostgreSQL 14<br>
 Bundler<br>
 
 # Installation
-```git clone git@github.com:14ypark/cointracker_takehome.git```
-```cd coin_tracker_takehome```
-```bundle install```
-```rails db:create```
-```rails db:migrate```
-```rails server```
+```git clone git@github.com:14ypark/cointracker_takehome.git```<br>
+```cd coin_tracker_takehome```<br>
+```bundle install```<br>
+```rails db:create```<br>
+```rails db:migrate```<br>
+```rails server```<br>
 
 API will be available at http://localhost:3000
 
-# API ENDPOINT
+## API Endpoints
 
-POST   /api/addresses/:id/sync          -> sync addresses<br>
-GET    /api/addresses/:id/transactions  -> view transactions <br>
-GET    /api/addresses                   -> index (list all)<br>
-POST   /api/addresses                   -> create (new address)<br>
-GET    /api/addresses/:id               -> show (one address)<br>
-DELETE /api/addresses/:id               -> destroy (delete)<br>
+| METHOD | ENDPOINT | DESCRIPTION |
+|--------|-------------------------------|-------------------------|
+| POST   | /api/addresses/:id/sync       | Sync address            |
+| GET    | /api/addresses/:id/transactions | View transactions      |
+| GET    | /api/addresses                | List all addresses      |
+| POST   | /api/addresses                | Create new address      |
+| GET    | /api/addresses/:id            | Show one address        |
+| DELETE | /api/addresses/:id            | Delete address          |
 
 
 # Run tests
