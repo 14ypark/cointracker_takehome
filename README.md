@@ -57,9 +57,8 @@ rspec
 
 # Manual testing 
 
-1. I used postman to test my application manually.<br>
-2. Endpoints can be easily teste
-d by doing the following.<br>
+1. postman can be used to test the application manually.<br>
+2. Endpoints can be easily tested by doing the following.<br>
 3. GET<br>
    <img width="838" height="641" alt="Screenshot 2025-10-07 at 3 09 31 PM" src="https://github.com/user-attachments/assets/efdaf2c7-15f8-4c99-82a3-c7e4cfb7cd26" /><br>
 4. POST<br>
