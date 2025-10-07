@@ -67,6 +67,20 @@ d by doing the following.<br>
 5. sync<br>
    <img width="829" height="652" alt="Screenshot 2025-10-07 at 3 11 32 PM" src="https://github.com/user-attachments/assets/a2fc336c-f505-4b2b-90d1-49f3d6ec256a" /><br>
 
+# Future enhancements
+
+# version 1.0<br>
+1. background job to sync the addresses<br>
+2. address format validation with regex<br>
+3. pagination improvement
+4. Service tests
+
+# version 2.0 <br>
+1. Authentication/security enhancements
+2. Rate limiters
+3. Caching
+4. Logging (cloudwatch)
+5. Tax calculation/reporting
 
 
 Ran into rate limit issues with blockchair so had to switch to blockchain.com. 
