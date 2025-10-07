@@ -55,5 +55,19 @@ API will be available at http://localhost:3000
 
 rspec 
 
+# Manual testing 
+
+1. I used postman to test my application manually.
+2. Endpoints can be easily teste
+d by doing the following.
+3. GET
+   <img width="838" height="641" alt="Screenshot 2025-10-07 at 3 09 31 PM" src="https://github.com/user-attachments/assets/efdaf2c7-15f8-4c99-82a3-c7e4cfb7cd26" />
+4. POST
+   <img width="816" height="628" alt="Screenshot 2025-10-07 at 3 10 49 PM" src="https://github.com/user-attachments/assets/ffe799fa-e661-4bca-b470-a7794a46e610" />
+5. sync
+   <img width="829" height="652" alt="Screenshot 2025-10-07 at 3 11 32 PM" src="https://github.com/user-attachments/assets/a2fc336c-f505-4b2b-90d1-49f3d6ec256a" />
+
+
+
 Ran into rate limit issues with blockchair so had to switch to blockchain.com. 
 
