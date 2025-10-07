@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :transaction do
-    address { nil }
-    tx_hash { "MyString" }
-    block_height { 1 }
-    timestamp { "2025-10-07 13:30:25" }
-    amount { "9.99" }
-    tx_type { "MyString" }
-    confirmations { 1 }
+    association :address
+    tx_hash { SecureRandom.hex(32) }
+    block_height { rand(1..9999) }
+    timestamp { rand(1..10).days.ago }
+    amount { rand(-5_000.0..5_000.0).round(8) }
+    tx_type { "received" }
+    confirmations { 10 }
   end
 end
